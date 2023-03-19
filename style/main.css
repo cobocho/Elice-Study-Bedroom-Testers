@@ -103,7 +103,7 @@ section.start-btn-wrapper .start-btn-backdrop {
   transition: bottom 0.5s;
 }
 
-section.start-btn-wrapper:hover .start .start-btn-backdrop {
+section.start-btn-wrapper:hover .start-btn-backdrop {
   bottom: 0;
 }
 
