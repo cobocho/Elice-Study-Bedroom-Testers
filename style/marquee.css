@@ -1,0 +1,65 @@
+@font-face {
+  font-family: 'TheJamsil5Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+.marquee-list {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.marquee-content {
+  top: 1vh;
+  position: absolute;
+  animation: scroll 20s 0.2s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-content:nth-child(2) {
+  top: 21vh;
+}
+
+.marquee-content:nth-child(3) {
+  top: 41vh;
+}
+
+.marquee-content:nth-child(4) {
+  top: 61vh;
+}
+
+.marquee-content:nth-child(5) {
+  top: 81vh;
+}
+
+.marquee-words {
+  display: flex;
+}
+
+.marquee-words p {
+  font-family: 'TheJamsil5Bold';
+  font-size: 20vh;
+  margin-right: 3vw;
+  white-space: nowrap;
+  color: skyblue;
+  opacity: 0.3;
+  user-select: none;
+  transition: all ease 0.4s;
+}
+
+.marquee-words p:hover {
+  color: #ebd834;
+  cursor: default;
+  text-shadow: 0 0 30px #FFF, 0 0 30px #FFF, 0 0 30px #FFF, 2px 2px 2px rgba(206,206,206,0);
+}
+
