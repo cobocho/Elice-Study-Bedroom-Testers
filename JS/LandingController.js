@@ -21,18 +21,17 @@ export default class LandingController {
     });
   }
   removeLandingPage() {
-    const $inner = $(".inner");
     const $beer = $("section.beer-wrapper");
     const $startBtnWrapper = $(".start-btn-wrapper");
     const $title = $(".title");
 
-    $inner.style.opacity = 0;
-    $title.style.opacity = 0;
-    $beer.style.transform = "translateY(100%)";
+    $startBtnWrapper.style.animation = "buttonRemove 1s ease forwards";
+    $title.style.animation = "titleRemove 1s ease forwards";
 
     setTimeout(() => {
+      $beer.style.transform = "translateY(100%)";
       $title.remove();
       $startBtnWrapper.remove();
-    }, 1500);
+    }, 1000);
   }
 }
