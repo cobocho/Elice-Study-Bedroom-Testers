@@ -1,24 +1,26 @@
 import LandingController from "./LandingController.js";
-import $ from "./Utils.js";
+import TestController from "./TestController.js";
+import { $ } from "./Utils.js";
 
 class App {
   constructor() {
-    this.state = {
-      seq: 0,
-      type: null,
-    };
     this.landingController = new LandingController();
+    this.testController = new TestController(this.state);
     this.init();
   }
   init() {
     const $startBtn = $(".start-btn");
     $startBtn.addEventListener("click", () => {
-      this.finishLandingPage();
+      this.turnToTestPage();
     });
+    this.landingController.addBubbles(70);
   }
-  finishLandingPage() {
+  turnToTestPage() {
     this.landingController.removeLandingPage();
+    this.testController.setFirstTest();
   }
 }
 
-new App();
+const app = new App();
+
+export default app;

@@ -1,14 +1,10 @@
 import Bubble from "./components/Bubble.js";
-import $ from "./Utils.js";
+import { $ } from "./Utils.js";
 
 export default class LandingController {
-  constructor() {
-    this.addBubbles(70);
-  }
   addBubbles(amount) {
-    const $inner = $(".inner");
     for (let i = 0; i < amount; i++) {
-      new Bubble($inner, "span");
+      new Bubble($(".inner"), "span", null, "bubble");
     }
   }
   removeLandingPage() {

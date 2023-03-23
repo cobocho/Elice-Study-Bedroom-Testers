@@ -1,5 +1,9 @@
-const $ = (selector) => {
+function $(selector) {
   return document.querySelector(selector);
-};
+}
 
-export default $;
+function getRandom(min, max, digit) {
+  return (Math.random() * (max - min) + min).toFixed(digit);
+}
+
+export { $, getRandom };
