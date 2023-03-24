@@ -1,0 +1,14 @@
+#main{
+    background-size: 10px 10px;
+    background-image:
+            linear-gradient(to right, #dfdfdf 0.5px, transparent 1px),
+            linear-gradient(to bottom, #dfdfdf 0.5px, transparent 1px);
+    background-color: whitesmoke;
+    width: 80%;
+    text-align: center;
+    border-radius: 20px;
+}
+
+p{
+    font-size: 20px;
+}
