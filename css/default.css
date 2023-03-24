@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: #4c4b16;
+    font-family: 'Gowun Dodum', sans-serif;
+}
+body{
+    background-color: #f7f1e5;
+}
+#container {
+    width: 860px;
+    text-align: center;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#qna, #result{
+    display: none;
+}
+#footer{
+    margin: 10px 0;
+}
