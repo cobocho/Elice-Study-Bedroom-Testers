@@ -9,6 +9,9 @@ const menu2name = document.getElementById("menu2name");
 const menu1 = document.getElementById("menu1");
 const menu2 = document.getElementById("menu2");
 const progressBar = document.getElementById("bar-progress");
+const roundName = document.getElementById("round-name")
+const resultMenuImg = document.getElementById("result-menu-img");
+const resultMenuName = document.getElementById("result-menu-name");
 
 function mainToTest(e) {
     e.preventDefault();
@@ -16,10 +19,12 @@ function mainToTest(e) {
     qna.style.display = "flex";
 }
 
-function testToResult(e) {
+function testToResult(e, idx) {
     e.preventDefault();
     qna.style.display = "none";
     result.style.display = "flex";
+    resultMenuName.innerText = `${menuList[menuIndex[i * 2]].name} 입니다!`
+    resultMenuImg.src = `${menuList[menuIndex[i * 2]].src}`
 }
 
 let i = 0;
@@ -27,6 +32,20 @@ let menuIndex = [...Array(menuList.length).keys()].sort(() => Math.random() - 0.
 
 function progress(idx) {
     progressBar.style.width = `${idx * 3.3}%`;
+}
+
+function roundInfo(idx){
+    if(i < 16){
+        roundName.innerText = "32강";
+    } else if(i < 24){
+        roundName.innerText = "16강";
+    } else if(i < 28){
+        roundName.innerText = "8강";
+    } else if(i < 30){
+        roundName.innerText = "4강";
+    } else{
+        roundName.innerText = "결승전";
+    }
 }
 
 function nextMenu(idx) {
@@ -48,25 +67,29 @@ mainButton.addEventListener("mouseout", (e) => {
 })
 mainButton.addEventListener("click", (e) => {
     mainToTest(e);
+    roundInfo(i);
     progress(i);
     nextMenu(i);
-    i++;
 });
 menu1.addEventListener("click", (e) => {
     menuIndex.push(menuIndex[i * 2]);
-    if (i === 30) testToResult(e)
-    else {
+    i++;
+    roundInfo(i);
+    if (i === 31) {
+        testToResult(e);
+    } else {
         progress(i);
         nextMenu(i);
-        i++;
     }
 })
 menu2.addEventListener("click", (e) => {
     menuIndex.push(menuIndex[i * 2 + 1]);
-    if (i === 30) testToResult(e)
-    else {
+    i++;
+    roundInfo(i);
+    if (i === 31) {
+        testToResult(e);
+    } else {
         progress(i);
         nextMenu(i);
-        i++;
     }
 })
