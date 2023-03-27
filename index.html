@@ -11,12 +11,13 @@
     <link rel="stylesheet" href="./css/default.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/qna.css">
-    <title>★점심메뉴 월드컵★</title>
+    <link rel="stylesheet" href="./css/result.css">
+    <title>&#9733; 점심메뉴 월드컵 &#9733;</title>
 </head>
 <body>
 <div id="container">
     <section id="main">
-        <h1>점심메뉴 월드컵</h1>
+        <h1>&#9733; 점심메뉴 월드컵 &#9733;</h1>
         <img src="./img/yachae-gopchang.jpg" alt="야채곱창 사진" id="main-image">
         <p>오늘 점심 뭐먹지? <br>점심메뉴 월드컵으로 알아보자</p>
         <button id="main-btn">시작하기</button>
@@ -25,19 +26,29 @@
         <div id="bar">
             <div id="bar-progress"></div>
         </div>
-        <h2>몇강일까요</h2>
+        <h2 id="round-name"></h2>
         <p>더 먹고싶은 메뉴를 골라주세요</p>
         <div id="menu-wrapper">
-            <div id="menu1" class="menu">메뉴1 내용</div>
-            <div id="menu2" class="menu">메뉴2 내용</div>
+            <div id="menu1" class="menu">
+                <img src="" alt="menu1" id="menu1image">
+                <p id="menu1name"></p>
+            </div>
+            <div id="menu2" class="menu">
+                <img src="" alt="menu2" id="menu2image">
+                <p id="menu2name"></p>
+            </div>
         </div>
     </section>
-    <section id="result">결과페이지 내용</section>
+    <section id="result">
+        <h2>오늘의 점심메뉴는</h2>
+        <img src="" alt="result-menu" id="result-menu-img">
+        <p id="result-menu-name"></p>
+    </section>
     <footer id="footer">
         Github | Elice | Bedroom-Testers | puranium235@gmail.com
     </footer>
 </div>
-<script src="./js/js.js"></script>
 <script src="./js/menu.js"></script>
+<script src="./js/js.js"></script>
 </body>
 </html>

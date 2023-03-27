@@ -1,0 +1,24 @@
+#result {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#result > h2 {
+    font-size: 50px;
+    margin: 10px 0;
+}
+
+#result > p {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+#result > #result-menu-img {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    margin: 10px 0;
+}
