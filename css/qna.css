@@ -36,9 +36,9 @@
     justify-content: center;
 }
 
-#qna .menu {
+#qna .menu > img {
     width: 400px;
     height: 300px;
+    object-fit: cover;
     margin: 10px;
-    background-color: white;
 }
