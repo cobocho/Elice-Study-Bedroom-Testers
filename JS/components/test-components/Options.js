@@ -5,18 +5,36 @@ import app from "../../App.js";
 export default class Options extends Component {
   constructor(target, element, state, className) {
     super(target, element, state, className);
-    this.setEvent();
-    new Option(this.$element, "div", this.state.options[0], "option plus");
-    new Option(this.$element, "div", this.state.options[1], "option minus");
+    this.clickable = true;
+    this.addEvent();
   }
-  setEvent() {
-    this.$element.addEventListener("click", (event) => {
-      if (event.target.classList.contains("options")) return;
+  addEvent() {
+    const clickOption = (event) => {
+      if (!event.target.closest(".option") || !this.clickable) {
+        return;
+      }
+      this.clickable = false;
+
+      if (this.state.seq === 7) {
+        app.testController.setResult(event.target.closest(".option").id);
+        return;
+      }
 
       const isPlus = event.target.closest(".option").classList.contains("plus");
 
-      if (isPlus) app.testController.changeQuestion("plus");
-      else app.testController.changeQuestion("minus");
-    });
+      app.testController.changeQuestion(isPlus ? "plus" : "minus");
+      this.clickable = true;
+    };
+
+    this.$element.addEventListener("click", clickOption);
+  }
+  mount() {
+    if (this.state.seq === 7) {
+      new Option(this.$element, "div", this.state.options[0].desc, "option plus", this.state.options[0].result);
+      new Option(this.$element, "div", this.state.options[1].desc, "option minus", this.state.options[1].result);
+    } else {
+      new Option(this.$element, "div", this.state.options[0], "option plus");
+      new Option(this.$element, "div", this.state.options[1], "option minus");
+    }
   }
 }

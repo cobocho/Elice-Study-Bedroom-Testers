@@ -6,8 +6,10 @@ export default class Component {
     this.$element = document.createElement(element);
     if (className) this.$element.className = className;
     this.render();
+    this.mount();
   }
   render() {
     this.#target.appendChild(this.$element);
   }
+  mount() {}
 }
