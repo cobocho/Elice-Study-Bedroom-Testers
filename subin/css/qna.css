@@ -1,3 +1,60 @@
 #qna {
     display: none;
 }
+.qBox {
+    background-size: 10px 10px;
+    background-color: whitesmoke;
+    background-image:
+            linear-gradient(to right, #dfdfdf 0.5px, transparent 1px),
+            linear-gradient(to bottom, #dfdfdf 0.5px, transparent 1px);
+    text-align: center;
+    border-radius: 20px;
+    font-size: 26px;
+    width: 80%
+}
+
+.answerList {
+    background-color: whitesmoke;
+    border-radius: 20px;
+    display: block;
+    width: 80%;
+    border: 0px;
+    font-size: 20px;
+}
+
+.answerList:hover, .answerList:focus {
+    background-color: #ABD0CE;
+    color: whitesmoke;
+}
+
+.status {
+    height: 20px;
+    width: 80%;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.statusBar {
+    height: 100%;
+    border-radius: 20px;
+    background-image: linear-gradient(
+            180deg,
+            hsl(153deg 90% 73%) 0%,
+            hsl(156deg 79% 69%) 4%,
+            hsl(158deg 70% 65%) 9%,
+            hsl(160deg 64% 61%) 14%,
+            hsl(162deg 58% 57%) 21%,
+            hsl(165deg 53% 53%) 29%,
+            hsl(166deg 50% 50%) 39%,
+            hsl(168deg 54% 46%) 51%,
+            hsl(170deg 58% 42%) 64%,
+            hsl(172deg 64% 39%) 75%,
+            hsl(173deg 71% 35%) 84%,
+            hsl(175deg 81% 31%) 92%,
+            hsl(176deg 97% 27%) 100%
+    );
+
+
+
+
+}

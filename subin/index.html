@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/default.css">
     <link rel="stylesheet" href="./css/qna.css">
+    <link rel="stylesheet" href="./css/animation.css">
+    <link rel="stylesheet" href="./css/result.css">
 </head>
 
 <body>
@@ -22,15 +24,13 @@
                 <img src="./img/air.png" alt="air" class="img-fluid">
             </div>
             <p>
-                <br>
-                당신의 여행하는 스타일과 선호하는 활동, 교통수단, 숙박 등 여러가지 요소를 기반으로  <br> 여행지를 추천해주는 사이트입니다! <br>
+                <br>당신의 여행하는 스타일과 선호하는 활동, 교통수단, 숙박 등 여러가지 요소를 기반으로  <br> 여행지를 추천해주는 사이트입니다! <br>
                 아래 "시작하기" 버튼을 눌러 시작해 주세요.
             </p>
             <button type="button" class="btn btn-outline-success mt-3" onclick="js:begin()"> 시작하기 </button>
         </section>
 
         <section id="qna">
-            <p> qna </p>
             <div class="status mx-auto mt-5">
                 <div class="statusBar">
                 </div>
@@ -42,10 +42,22 @@
 
             </div>
         </section>
-        <script src="./js/start.js" charset="utf-8"></script>
-        <section id="result">
+        <section id="result" class="mx-auto my-5 py-5 px-3">
+            <h1>당신의 결과는?!</h1>
+            <div class="resultname">
 
+            </div>
+            <div id="resultImg" class="my-3 col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+
+            </div>
+            <div class="resultDesc">
+
+            </div>
+            <!--button type="button" class="kakao mt-3 py-2 px-3" onclick="">공유하기</button-->
         </section>
+        <script src="./js/data.js" charset="utf-8"></script>
+        <script src="./js/start.js" charset="utf-8"></script>
+
     </div>
 
 </body>
